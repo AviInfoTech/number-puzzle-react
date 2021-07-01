@@ -1,13 +1,107 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+  background: white;
+  color: white
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+.App {
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
+.container{
+  border: 2px solid black;
+  width: 350px;
+  margin: 60px;
+  background-color: brown;
+}
+.board {
+  padding: 0;
+  border: 1px solid;
+  width: 320px;
+  height: 320px;
+  background-color: orangered;
+  margin-left: 13px;
+  
+}
+.square-design {
+  display: inline-block; 
+  list-style: none;
+  background: black;
+  place-items: center;
+  font-size: 20px;
+  width: 33.33%;
+  height: 32.33%;
+ 
+}
+.square-design:hover{
+  background-color: thistle;
+}
+
+.btn-container {
+  /* display: inline-block;
+  padding: 1px;
+  font-size: 20px;
+ margin-right: 100px; */
+ display: flex;
+ width: 300px;
+ flex-direction: row;
+ justify-content: space-between;
+ margin-left: 13px;
+
+}
+button{
+  width: 120px;
+  height: 30px;
+  background-color: thistle;
+  margin-right: -22px;
+  border: 1px solid ;
+  margin-bottom: 5px; 
+}
+button:hover{
+  background-color: royalblue;
+  transform: scale(1.1);
+  
+}
+
+ li{
+   text-align: center;
+   
+ }
+ 
+ li span{
+  position: absolute;
+  margin-top: 30px;
+  font-size: 30px;
+  color: red;
+ }
+ 
+ 
+ .gameStatus{
+   width:328px;
+   border: 1px solid;
+   padding: 10px;
+   font-size: 20px;
+   background-color: thistle;
+   color: black;
+   /* margin-left: 13px; */
+ }
+ .moveCounter{
+  width: 328px;
+  border: 1px solid;
+  padding: 10px;
+  font-size: 20px;
+  background-color: thistle;
+  color: black;
+  /* margin-left: 13px; */
+ }
+ .moveCounter span{
+   font-size: 24px;
+   color: red;
+   
+ }
+ ul li:hover{
+  transform: scale(0.9);
+ }
