@@ -50,6 +50,16 @@ function Board() {
         setGame(false)
         setSquare([...Array(9).keys()])
     }
+    function isSolved(data) {
+        for (let i = 0, l = data.length; i < l; i++) {
+            if (data[i] !== i) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    const winner = isSolved(square)
     return (
         <>
             <div className="container">
@@ -66,6 +76,7 @@ function Board() {
                     <button onClick={() => stopGame()} >Stop Playing</button>
                 </div>
             </div>
+            {winner && startGame && <div>Puzzle solved</div>}
         </>
     );
 }
